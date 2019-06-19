@@ -5,7 +5,7 @@ using UnityEngine;
 public class D_BackgroundScroller : MonoBehaviour
 {
     private Rigidbody2D r_scroll;
-    private float speed = -1.5f;
+    private float speed = -5f;
     private bool gameOver = false;
 	// Use this for initialization
 	void Start ()
