@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BackgroundScroller : MonoBehaviour
 {
+    public Player_Controls Player;
 
     public float speed;
 
@@ -18,6 +19,10 @@ public class BackgroundScroller : MonoBehaviour
     {
         Vector2 offset = new Vector2(Time.time * speed, 0);
         GetComponent<Renderer>().material.mainTextureOffset = offset;
+        if(Player.GameOver == true)
+        {
+            speed = 0;
+        }
     }
 }
 

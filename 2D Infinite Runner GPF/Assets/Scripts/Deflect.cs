@@ -13,9 +13,9 @@ public class Deflect : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2D (Collider other)
+    void OnTriggerEnter2D (Collider2D other)
     {
-        if(other.gameObject.tag == "Robot" || other.gameObject.tag == "Laser")
+        if(other.gameObject.tag == "Laser")
         {
             if(Input.GetKeyDown(KeyCode.X))
             {
