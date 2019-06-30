@@ -7,22 +7,24 @@ public class Player_Controls : MonoBehaviour
     private int Health = 1;
     private int Damage = 1;
     public bool GameOver = false;
+    public Animator attack;
 
 	void Update ()
     {
         if(Input.GetKeyDown(KeyCode.Z))
         {
             StartCoroutine(Attack());
+
         }
     }
     IEnumerator Attack()
     {
         //Attack animation
         gameObject.GetComponent<Collider2D>().isTrigger = true;
+        attack.SetTrigger("isAttacking");
         Debug.Log("Attack!");
         yield return new WaitForSeconds(0.1f);
         gameObject.GetComponent<Collider2D>().isTrigger = false;
-        Debug.Log("Attack animation ended!");
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
