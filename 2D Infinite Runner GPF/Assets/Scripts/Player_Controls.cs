@@ -4,17 +4,14 @@ using UnityEngine;
 
 public class Player_Controls : MonoBehaviour
 {
-    private int Health = 1;
-    private int Damage = 1;
     public bool GameOver = false;
     public Animator attack;
-
+    public Enemy _enemy;
 	void Update ()
     {
         if(Input.GetKeyDown(KeyCode.Z))
         {
             StartCoroutine(Attack());
-
         }
     }
     IEnumerator Attack()
@@ -27,11 +24,11 @@ public class Player_Controls : MonoBehaviour
         gameObject.GetComponent<Collider2D>().isTrigger = false;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Laser")
+        if(collision.gameObject.tag == "Enemy")
         {
-            Health -= Damage;
+            _enemy.ReceiveDamage(1);
         }
     }
 }

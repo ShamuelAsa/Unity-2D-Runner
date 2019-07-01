@@ -21,7 +21,7 @@ public class BackgroundScroller : MonoBehaviour
         GetComponent<Renderer>().material.mainTextureOffset = offset;
         if(Player.GameOver == true)
         {
-            speed = 0;
+            
         }
     }
 }
