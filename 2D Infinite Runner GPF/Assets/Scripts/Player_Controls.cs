@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Player_Controls : MonoBehaviour
 {
+    public float distance = 0.0f;
     public bool GameOver = false;
     public Animator attack;
-    public Enemy _enemy;
-	void Update ()
+    public List<GameObject> Drones = new List<GameObject>();
+    void Update ()
     {
         if(Input.GetKeyDown(KeyCode.Z))
         {
@@ -26,9 +27,11 @@ public class Player_Controls : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Enemy")
+        GameObject enemyCollided = collision.gameObject;
+
+        if (collision.gameObject.CompareTag("Enemy"))
         {
-            _enemy.ReceiveDamage(1);
+            enemyCollided.GetComponent<Enemy>().ReceiveDamage(1);
         }
     }
 }
