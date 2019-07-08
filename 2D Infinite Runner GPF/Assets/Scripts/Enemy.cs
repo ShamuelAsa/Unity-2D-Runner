@@ -30,7 +30,6 @@ public class Enemy : MonoBehaviour
         if(isDead != true)
         {
             _rb.isKinematic = true;
-            //_rb.velocity = new Vector2(-Speed * Time.deltaTime, 0);
             _rb.AddForce(new Vector2(-Speed * Time.time, 0), ForceMode2D.Impulse);
             transform.Translate(-Speed * Time.deltaTime, 0, 0);
         }
@@ -49,6 +48,7 @@ public class Enemy : MonoBehaviour
             Health -= Damage;
             if(Health <= 0)
             {
+                Player.Drones.Clear();
                 UI_Script.score += 10;
                 isDead = true;
                 maxHealth += Random.Range(1, 10);

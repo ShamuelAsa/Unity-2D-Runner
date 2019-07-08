@@ -664,6 +664,7 @@ MonoBehaviour:
   GameOver: 0
   attack: {fileID: 1731591691}
   Drones: []
+  curDistance: 0
 --- !u!61 &295583753
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -673,10 +674,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.8762965, y: -0.16144347}
+  m_Offset: {x: 1.187135, y: -0.16144371}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -687,7 +688,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 13.016608, y: 8.941042}
+  m_Size: {x: 11.638285, y: 8.941042}
   m_EdgeRadius: 0
 --- !u!1 &401231839
 GameObject:
