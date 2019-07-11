@@ -47,8 +47,7 @@ public class Enemy : MonoBehaviour
         {
             Health -= Damage;
             if(Health <= 0)
-            {
-                Player.Drones.Clear();
+            { 
                 UI_Script.score += 10;
                 isDead = true;
                 maxHealth += Random.Range(1, 10);

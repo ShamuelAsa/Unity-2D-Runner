@@ -4,19 +4,36 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Player_Controls : MonoBehaviour
 {
-    public float distance = 0.0f;
+    float distance = 0.0f;
     public bool GameOver = false;
     public Animator attack;
-    public List<GameObject> Drones = new List<GameObject>();
-    public float curDistance;
+    
+    float curDistance;
     GameObject closest = null;
 
     float Timer = 10;
     bool useAbility = false;
 
+    int _comboC;
     public Text cdText;
+    public Text comboText, comboN;
+
+    private void Start()
+    {
+        _comboC = 0;
+    }
     void Update ()
     {
+        if(_comboC == 0)
+        {
+            comboText.text = "";
+            comboN.text = "";
+        }
+        else if(_comboC >= 2)
+        {
+            comboText.text = "Combo";
+            comboN.text = _comboC + "!";
+        }
         if(!useAbility)
         {
             cdText.text = "Cooldown: " + Mathf.Round(Timer);
@@ -30,30 +47,35 @@ public class Player_Controls : MonoBehaviour
         }
 
         ClosestEnemy();
-        if (Input.GetKeyDown(KeyCode.Z) && distance < 60.0f)
+        if (Input.GetKeyDown(KeyCode.Z) && distance < 70.0f)
         {
             StartCoroutine(Attack());
+            _comboC += 1;
 
             closest.GetComponent<Enemy>().ReceiveDamage(1);
         }
         else if (Input.GetKeyDown(KeyCode.Z))
         {
             StartCoroutine(Attack());
+            _comboC = 0;
         }
 
-        if (Input.GetKeyDown(KeyCode.X) && distance < 60.0f)
+        if (Input.GetKeyDown(KeyCode.X) && distance < 70.0f)
         {
             StartCoroutine(Attack2());
+            _comboC += 1;
 
             closest.GetComponent<Enemy>().ReceiveDamage(1);
         }
         else if (Input.GetKeyDown(KeyCode.X))
         {
             StartCoroutine(Attack2());
+            _comboC = 0;
         }
 
-        if (Input.GetKeyDown(KeyCode.C) && distance < 60.0f && Timer <= 0)
+        if (Input.GetKeyDown(KeyCode.C) && distance < 70.0f && Timer <= 0)
         {
+            _comboC += 1;
             useAbility = false;
             Timer = 10;
             StartCoroutine(Deflect());
