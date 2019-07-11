@@ -1,12 +1,12 @@
 fileFormatVersion: 2
-guid: 23a9173478e62714c90d79847cb752dd
+guid: d617aa0b435f5904f8d30012a67f2c62
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Slash1_0
-    21300002: Slash1_1
-    21300004: Slash1_2
-    21300006: Slash1_3
-    21300008: Slash1_4
+    21300000: Slash1Sheet_0
+    21300002: Slash1Sheet_1
+    21300004: Slash1Sheet_2
+    21300006: Slash1Sheet_3
+    21300008: Slash1Sheet_4
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -89,101 +89,101 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Slash1_0
+      name: Slash1Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1000
-        height: 1000
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 512
+        height: 512
+      alignment: 9
+      pivot: {x: 0.44164228, y: 0.22435284}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b181a87a093f38449aa9eed60f20bb5e
+      spriteID: 5f02c781eae122d498acc332a2b1920d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slash1_1
+      name: Slash1Sheet_1
       rect:
         serializedVersion: 2
-        x: 1000
+        x: 512
         y: 0
-        width: 1000
-        height: 1000
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 512
+        height: 512
+      alignment: 9
+      pivot: {x: 0.09025419, y: 0.26408577}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 24dd4f49cea737e47b345ae8d4fbeab3
+      spriteID: d35bc079165915e4e84dfd2f46ab31ac
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slash1_2
+      name: Slash1Sheet_2
       rect:
         serializedVersion: 2
-        x: 2000
+        x: 1024
         y: 0
-        width: 1000
-        height: 1000
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 512
+        height: 512
+      alignment: 9
+      pivot: {x: 0.17841172, y: 0.21566126}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 877e81698f3f9c649bedef72c5d55f19
+      spriteID: c0e44a69a81361f429133e2edb7934c1
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slash1_3
+      name: Slash1Sheet_3
       rect:
         serializedVersion: 2
-        x: 3000
+        x: 1537
         y: 0
-        width: 1000
-        height: 1000
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 512
+        height: 512
+      alignment: 9
+      pivot: {x: 0.13867855, y: 0.2553942}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f8625be3ca6ae514fbe8a630e0ea6614
+      spriteID: e23a60e9de6ed7f44b682cdbc026f512
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Slash1_4
+      name: Slash1Sheet_4
       rect:
         serializedVersion: 2
-        x: 4000
+        x: 2048
         y: 0
-        width: 1000
-        height: 1000
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 512
+        height: 512
+      alignment: 9
+      pivot: {x: 0.14861155, y: 0.2553942}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3fd7c071c267d0e40b32483ecc2ba655
+      spriteID: 977c0ae9a2fffee4ab18657a93f32446
       vertices: []
       indices: 
       edges: []
@@ -191,7 +191,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: ccf63a6e4efe1744f87a3b1a3677644e
+    spriteID: 8a5610384cb18ed46990d42f8f528119
     vertices: []
     indices: 
     edges: []

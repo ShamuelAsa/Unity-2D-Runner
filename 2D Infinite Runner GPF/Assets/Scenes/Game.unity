@@ -145,7 +145,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.029534854, y: 0.7545555}
   m_AnchorMax: {x: 0.43620571, y: 0.8581112}
-  m_AnchoredPosition: {x: -63.999992, y: -335}
+  m_AnchoredPosition: {x: -64, y: -335}
   m_SizeDelta: {x: 17.900024, y: -4.199997}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2067041
@@ -7852,7 +7852,7 @@ SpriteRenderer:
   m_Size: {x: 4.66, y: 3.46}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1731591693
