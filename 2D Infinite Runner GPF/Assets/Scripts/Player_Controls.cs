@@ -42,38 +42,38 @@ public class Player_Controls : MonoBehaviour
         if(Timer <= 0)
         {
             useAbility = true;
-            cdText.text = "C to use Ability!";
+            cdText.text = "Space to use Ability!";
             Timer = 0;
         }
 
         ClosestEnemy();
-        if (Input.GetKeyDown(KeyCode.Z) && distance < 70.0f)
+        if (Input.GetKeyDown(KeyCode.D) && distance < 70.0f)
         {
             StartCoroutine(Attack());
             _comboC += 1;
 
             closest.GetComponent<Enemy>().ReceiveDamage(1);
         }
-        else if (Input.GetKeyDown(KeyCode.Z))
+        else if (Input.GetKeyDown(KeyCode.D))
         {
             StartCoroutine(Attack());
             _comboC = 0;
         }
 
-        if (Input.GetKeyDown(KeyCode.X) && distance < 70.0f)
+        if (Input.GetKeyDown(KeyCode.J) && distance < 70.0f)
         {
             StartCoroutine(Attack2());
             _comboC += 1;
 
             closest.GetComponent<Enemy>().ReceiveDamage(1);
         }
-        else if (Input.GetKeyDown(KeyCode.X))
+        else if (Input.GetKeyDown(KeyCode.J))
         {
             StartCoroutine(Attack2());
             _comboC = 0;
         }
 
-        if (Input.GetKeyDown(KeyCode.C) && distance < 70.0f && Timer <= 0)
+        if (Input.GetKeyDown(KeyCode.Space) && distance < 70.0f && Timer <= 0)
         {
             _comboC += 1;
             useAbility = false;
@@ -81,7 +81,7 @@ public class Player_Controls : MonoBehaviour
             StartCoroutine(Deflect());
             closest.GetComponent<Enemy>().ReceiveDamage(10);
         }
-        else if (Input.GetKeyDown(KeyCode.C) && Timer <= 0)
+        else if (Input.GetKeyDown(KeyCode.Space) && Timer <= 0)
         {
             useAbility = false;
             Timer = 10;
