@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 440e9b0c0fbfab248a89abe32cd3d0d2
+guid: e2eca4c9486a1e5478f87749ccaa4ed6
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Run torso_0
-    21300002: Run torso_1
-    21300004: Run torso_2
-    21300006: Run torso_3
+    21300000: Slash 2 sheet_0
+    21300002: Slash 2 sheet_1
+    21300004: Slash 2 sheet_2
+    21300006: Slash 2 sheet_3
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -88,81 +88,81 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Run torso_0
+      name: Slash 2 sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 396
-        height: 410
+        width: 512
+        height: 512
       alignment: 9
-      pivot: {x: 0.41330683, y: 0.16633713}
+      pivot: {x: 0.46088156, y: 0.4125588}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 81c05baeba8c98448b052e2579cc31ce
+      spriteID: b90ffb1be46da334a9c223ac0d52b0a5
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run torso_1
+      name: Slash 2 sheet_1
       rect:
         serializedVersion: 2
-        x: 518
+        x: 513
         y: 0
-        width: 343
-        height: 410
+        width: 512
+        height: 512
       alignment: 9
-      pivot: {x: 0.29072326, y: 0.17394921}
+      pivot: {x: 0.05004394, y: 0.3828819}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6705d94283603c64593ce7e9244c1fbd
+      spriteID: 48d8845ca2b536e42a85ac75b5a603ce
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Run torso_2
+      name: Slash 2 sheet_2
       rect:
         serializedVersion: 2
-        x: 930
-        y: 13
-        width: 409
-        height: 396
-      alignment: 9
-      pivot: {x: 0.33084548, y: 0.15058498}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 76041e5d1108eca46b4b8766468e795d
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Run torso_3
-      rect:
-        serializedVersion: 2
-        x: 1420
+        x: 1024
         y: 0
-        width: 343
-        height: 410
+        width: 512
+        height: 512
       alignment: 9
-      pivot: {x: 0.2910064, y: 0.17268127}
+      pivot: {x: 0.2646079, y: 0.42249283}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: efe4535f1e589e44d98a89798fe8e228
+      spriteID: c6e0cfd23ea4b3546b63858be5f6c685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slash 2 sheet_3
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 512
+        height: 512
+      alignment: 9
+      pivot: {x: 0.2651224, y: 0.40298536}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4772b7f09ebe74b4ca10e136ea6e31c1
       vertices: []
       indices: 
       edges: []
@@ -170,7 +170,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: d7941fed47d574a429d6de4b2e36eb4b
+    spriteID: a195297ae2c43c0489792dd2fb5750ef
     vertices: []
     indices: 
     edges: []
