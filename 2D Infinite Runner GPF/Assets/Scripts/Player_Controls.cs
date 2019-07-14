@@ -7,7 +7,7 @@ public class Player_Controls : MonoBehaviour
     float distance = 0.0f;
     public bool GameOver = false;
     public Animator attack;
-    
+
     float curDistance;
     GameObject closest = null;
 
@@ -22,24 +22,32 @@ public class Player_Controls : MonoBehaviour
     {
         _comboC = 0;
     }
-    void Update ()
+    void Update()
     {
-        if(_comboC == 0)
+
+        if (Input.GetKeyDown(KeyCode.Space) && Timer <= 0)
+        {
+            Timer = 10;
+            useAbility = false;
+            Timer = 10;
+            StartCoroutine(Deflect());
+        }
+        if (_comboC == 0)
         {
             comboText.text = "";
             comboN.text = "";
         }
-        else if(_comboC >= 2)
+        else if (_comboC >= 2)
         {
             comboText.text = "Combo";
             comboN.text = _comboC + "!";
         }
-        if(!useAbility)
+        if (!useAbility)
         {
             cdText.text = "Cooldown: " + Mathf.Round(Timer);
             Timer -= Time.deltaTime;
         }
-        if(Timer <= 0)
+        if (Timer <= 0)
         {
             useAbility = true;
             cdText.text = "Space to use Ability!";
@@ -73,20 +81,6 @@ public class Player_Controls : MonoBehaviour
             _comboC = 0;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && distance < 70.0f && Timer <= 0)
-        {
-            _comboC += 1;
-            useAbility = false;
-            Timer = 10;
-            StartCoroutine(Deflect());
-            closest.GetComponent<Enemy>().ReceiveDamage(10);
-        }
-        else if (Input.GetKeyDown(KeyCode.Space) && Timer <= 0)
-        {
-            useAbility = false;
-            Timer = 10;
-            StartCoroutine(Deflect());
-        }
     }
     IEnumerator Attack()
     {
@@ -105,30 +99,42 @@ public class Player_Controls : MonoBehaviour
 
     IEnumerator Deflect()
     {
+        GetComponent<Collider2D>().isTrigger = true;
         attack.SetTrigger("isDeflecting");
         yield return new WaitForSeconds(0.1f);
+        GetComponent<Collider2D>().isTrigger = false;
     }
     public GameObject ClosestEnemy()
     {
         GameObject[] _enemies;
         _enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        
+
         distance = Mathf.Infinity;
         Vector3 pos = transform.position;
         foreach (GameObject enemy in _enemies)
         {
             Vector3 diff = enemy.transform.position - pos;
             curDistance = diff.sqrMagnitude;
-            if(curDistance < distance)
+            if (curDistance < distance)
             {
                 closest = enemy;
-                distance = curDistance;  
+                distance = curDistance;
             }
-            else if(closest.GetComponent<Enemy>().Health <= 0)
+            else if (closest.GetComponent<Enemy>().Health <= 0)
             {
                 closest = enemy;
             }
         }
         return closest;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        GameObject enemyCollided = collision.gameObject;
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            enemyCollided.GetComponent<Enemy>().ReceiveDamage(100);
+            _comboC += 1;
+        }
     }
 }
